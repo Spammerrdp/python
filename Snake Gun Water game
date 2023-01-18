@@ -1,0 +1,101 @@
+import random
+import playsound
+if __name__ == '__main__':
+        start = 0
+        limit = 10
+        my_point = 0
+        bot_point = 0
+        bot = ["Gun","Snake","Water"]
+        print("Type anyone given list:-","Gun","Snake","Water")
+        while start < limit:
+            input1 = (input("Enter here\n")).capitalize()
+            botselect = random.choice(bot)
+            if input1=="Gun":
+                start= start+1
+                if botselect=="Gun":
+                    print(input1,",",botselect)
+                    print("Game tie")
+                    my_point=my_point+0
+                    bot_point=bot_point+0
+                    print("No. of chance left-",10-start)
+                    print("Your point-",my_point,"and bot point-",bot_point)
+                elif botselect=="Snake":
+                    print(input1, ",", botselect)
+                    print("You won")
+                    playsound.playsound("C:\\Users\\krish\\Downloads\\flappy\gallery\\audio\\point.wav")
+                    my_point = my_point + 1
+                    bot_point = bot_point + 0
+                    print("No. of chance left-", 10-start)
+                    print("Your point-", my_point, "and bot point-", bot_point)
+                else:
+                    print(input1, ",", botselect)
+                    print("Bot won")
+                    playsound.playsound("C:\\Users\\krish\\Downloads\\flappy\gallery\\audio\hit.wav")
+                    playsound.playsound("C:\\Users\\krish\\Downloads\\flappy\gallery\\audio\\die.wav")
+                    my_point = my_point + 0
+                    bot_point = bot_point + 1
+                    print("No. of chance left-", 10-start)
+                    print("Your point-", my_point, "and bot point-", bot_point)
+            elif input1=="Snake":
+                start=start+1
+                if botselect=="Snake":
+                    print(input1, ",", botselect)
+                    print("Game tie")
+                    my_point=my_point+0
+                    bot_point=bot_point+0
+                    print("No. of chance left-",10-start)
+                    print("Your point-",my_point,"and bot point-",bot_point)
+                elif botselect=="Gun":
+                    print(input1, ",", botselect)
+                    print("Bot won")
+                    playsound.playsound("C:\\Users\\krish\\Downloads\\flappy\gallery\\audio\hit.wav")
+                    my_point = my_point + 0
+                    bot_point = bot_point + 1
+                    print("No. of chance left-", 10-start)
+                    print("Your point-", my_point, "and bot point-", bot_point)
+                else:
+                    print(input1, ",", botselect)
+                    print("You won")
+                    playsound.playsound("C:\\Users\\krish\\Downloads\\flappy\gallery\\audio\\point.wav")
+                    my_point = my_point + 1
+                    bot_point = bot_point + 0
+                    print("No. of chance left-", 10-start)
+                    print("Your point-", my_point, "and bot point-", bot_point)
+            elif input1=="Water":
+                start=start+1
+                if botselect=="Water":
+                    print(input1, ",", botselect)
+                    print("Game tie")
+                    my_point=my_point+0
+                    bot_point=bot_point+0
+                    print("No. of chance left-",10-start)
+                    print("Your point-",my_point,"and bot point-",bot_point)
+                elif botselect=="Snake":
+                    print(input1, ",", botselect)
+                    print("Bot won")
+                    playsound.playsound("C:\\Users\\krish\\Downloads\\flappy\gallery\\audio\hit.wav")
+                    my_point = my_point + 0
+                    bot_point = bot_point + 1
+                    print("No. of chance left-", 10-start)
+                    print("Your point-", my_point, "and bot point-", bot_point)
+                else:
+                    print(input1, ",", botselect)
+                    print("You won")
+                    playsound.playsound("C:\\Users\\krish\\Downloads\\flappy\gallery\\audio\\point.wav")
+                    my_point = my_point + 1
+                    bot_point = bot_point + 0
+                    print("No. of chance left-", 10-start)
+                    print("Your point-", my_point, "and bot point-", bot_point)
+            else:
+                start=start-1
+                print("You entered wrong input.\nTip- First letter is capital.")
+            if start==limit:
+                print("Game Over")
+
+            print("Your total score is ",my_point,"Bot total score is ",bot_point)
+        if my_point>bot_point:
+            print("Congratulations, you won.")
+        elif my_point<bot_point:
+            print("Better luck next time.")
+        elif my_point>=bot_point:
+            print("Game tie.")
