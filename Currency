@@ -1,0 +1,103 @@
+user = int(input("Enter amount"))
+
+if user>=2000:
+    rem=user//2000
+    div=user%2000
+    if rem!=0:
+        print(f"Total {rem} note of 2000 rupees are required.")
+    if div==0:
+        exit()
+    elif div!=0:
+        user = div
+        pass
+
+if user<=2000:
+    rem=user//500
+    div=user%500
+    if rem != 0:
+        print(f"Total {rem} note of 500 rupees are required.")
+    if div==0:
+        exit()
+    elif div!=0:
+        user=div
+        pass
+if user<=500:
+    rem=user//200
+    div=user%200
+    if rem != 0:
+        print(f"Total {rem} note of 200 rupees are required.")
+    if div==0:
+        exit()
+    else:
+        user = div
+        pass
+if user<=200:
+    rem=user//100
+    div=user%100
+    if rem != 0:
+        print(f"Total {rem} note of 100 rupees are required.")
+    if div==0:
+        exit()
+    else:
+        user = div
+        pass
+if user<=100:
+    rem=user//50
+    div=user%50
+    if rem != 0:
+        print(f"Total {rem} note of 50 rupees are required.")
+    if div==0:
+        exit()
+    else:
+        user = div
+        pass
+if user<=50:
+    rem=user//20
+    div=user%20
+    if rem != 0:
+        print(f"Total {rem} note or coin of 20 rupees are required.")
+    if div==0:
+        exit()
+    else:
+        user = div
+        pass
+if user<=20:
+    rem=user//10
+    div=user%10
+    if rem != 0:
+        print(f"Total {rem} note or coin of 10 rupees are required.")
+    if div==0:
+        exit()
+    else:
+        user = div
+        pass
+if user<=10:
+    rem=user//5
+    div=user%5
+    if rem != 0:
+        print(f"Total {rem} note or coin of 5 rupees are required.")
+    if div==0:
+        exit()
+    else:
+        user = div
+        pass
+if user<=4:
+    rem=user//2
+    div=user%2
+    if rem != 0:
+        print(f"Total {rem} coin of 2 rupees are required.")
+    if div==0:
+        exit()
+    else:
+        user = div
+        pass
+if user<=3:
+    rem=user//1
+    div=user%1
+    if rem != 0:
+        print(f"Total {rem} coin of 1 rupees are required.")
+    if div==0:
+        exit()
+    else:
+        user = div
+        pass
