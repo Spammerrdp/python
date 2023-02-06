@@ -1,0 +1,9 @@
+var1 = -9
+var2 = -8
+l=[]
+for i in range(0,var1,-1):
+    l.append(1)
+for i1 in range(0,var2,-1):
+    l.append(1)
+if var1<=0 and var2<=0:
+    print(f"Total= -{len(l)}")
