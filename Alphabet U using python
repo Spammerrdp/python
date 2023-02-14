@@ -1,0 +1,11 @@
+from turtle import *
+pencolor("grey")
+pensize(10)
+penup()
+goto(-30,50)
+pendown()
+right(90)
+forward(100)
+circle(50,180,100)
+forward(100)
+exitonclick()
