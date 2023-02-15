@@ -1,0 +1,10 @@
+from turtle import * #pip install turtle
+from sketchpy import canvas as sp #pip install sketchpy
+penup()
+setpos(-350, -300)
+pendown()
+pencolor("orange")
+write("जय \n श्री \n राम",font=("normal", 25, "bold"))
+path = "Your img path"
+screen = sp.sketch_from_image(path)
+screen.draw()
