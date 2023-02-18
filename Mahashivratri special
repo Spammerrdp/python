@@ -1,0 +1,4 @@
+from sketchpy import canvas
+path = "C:/Users/krish/Downloads/shivji3.2.jpg"
+v = canvas.sketch_from_image(path)
+v.draw()
