@@ -1,0 +1,10 @@
+Step 1 :- open command prompt
+Step 2 :- type - pip install turtle
+step 3 :- open any IDE for eg: Pycharm, visual studio code etc.
+Step 4 :- create file
+Step 5 :- type - import turtle
+Step 6 :- type - t = turtle.Turtle()
+Step 7 :- type - t.forward(100)
+Step 8 :- type - t.right(90)
+Step 9 :- type - t.forward(100)
+Step 10 :- Press Run 
