@@ -1,0 +1,4 @@
+import sketchpy.canvas as sp # pip install sketchpy
+path = " Your img path. Download img from here - https://github.com/Krishna2-3/python/commit/732a7d4e52af920de307a305f1101185c208ed0c"
+screen = sp.sketch_from_image(path)
+screen.draw()
