@@ -1,6 +1,6 @@
-import time
-from turtle import *
-import PySimpleGUI as sg
+import time #Open cmd and paste this and press ENTER key- pip install time 
+from turtle import * #Open cmd and paste this and press ENTER key- pip install turtle
+import PySimpleGUI as sg #Open cmd and paste this and press ENTER key- pip install pySimpleGUI
 sg.theme('Default')
 speed("fastest")
 def A():
