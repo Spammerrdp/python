@@ -1,6 +1,8 @@
-import time #Open cmd and paste this and press ENTER key- pip install time 
-from turtle import * #Open cmd and paste this and press ENTER key- pip install turtle
-import PySimpleGUI as sg #Open cmd and paste this and press ENTER key- pip install pySimpleGUI
+import time
+from turtle import *
+import PySimpleGUI as sg
+import pyttsx3
+
 sg.theme('Default')
 speed("fastest")
 def A():
@@ -17,6 +19,7 @@ def A():
     forward(150)
     time.sleep(2)
     resetscreen()
+
 def R():
     penup()
     goto(-30, 50)
@@ -61,13 +64,14 @@ def B():
     pendown()
     pensize(20)
     color("grey")
-    circle(80, 180)
+    circle(70, 180)
     left(90)
     forward(145 * 2)
     left(90)
-    circle(80, 180)
+    circle(70, 180)
     time.sleep(2)
     resetscreen()
+
 def C():
     penup()
     goto(-30, 50)
@@ -234,7 +238,7 @@ def O():
     pencolor("grey")
     pensize(10)
     penup()
-    goto(-30, 50)
+    goto(-20, -30)
     pendown()
     circle(100, None, 100)
     time.sleep(2)
@@ -266,11 +270,11 @@ def S():
     pencolor("grey")
     pensize(10)
     penup()
-    setpos(50, 180)
+    setpos(10, 180)
     pendown()
-    forward(30)
-    backward(30)
-    circle(-90, -185)
+    forward(10)
+    backward(60)
+    circle(-80, -185)
     circle(90, -250)
     time.sleep(2)
     resetscreen()
@@ -371,13 +375,18 @@ def Z():
     forward(100)
     time.sleep(2)
     resetscreen()
-def notice():
+def space():
+    pass
+def under():
+    pencolor("grey")
+    pensize(10)
     penup()
-    goto(-370,-300)
+    goto(-30, 50)
     pendown()
-    write("click on screen to exit!", font=("normal",  10, "bold"))
-    time.sleep(1)
+    forward(100)
+    time.sleep(2)
     resetscreen()
+
 
 k = [[sg.Text('Enter Your Name:', size =(15, 1)), sg.InputText()],[sg.Submit(),sg.Cancel()]]
 w = sg.Window("",k)
@@ -412,12 +421,27 @@ function_map = {
     'X': X,
     'Y': Y,
     'Z': Z,
+    " ":space,
+    "_":under,
 }
 time.sleep(2)
+tt  = 0
 try:
-    for i in user:
-        function_map[i]()
+    if user != (None or "NONE"):
+        for i in user:
+            function_map[i]()
 except Exception as e:
-    sg.popup_annoying("OOPS!, you entered number in input.")
-write(user,font=("normal", 50, "bold"),align="center")
-exitonclick()
+
+    if user != (None or "NONE"):
+        sg.popup_annoying("OOPS!, you entered number or special character in input ＞﹏＜")
+        tt+=1
+    else:
+        sg.popup_annoying("OOPS!, you have not entered anything ￣へ￣")
+if user != (None or "NONE" or int or float or bool):
+    if tt!=1:
+        pyttsx3.speak(user)
+        write(user,font=("normal", 50, "bold"),align="center")
+        exitonclick()
+else:
+    sg.popup_annoying("OOPS!, you have not entered anything ￣へ￣")
+
